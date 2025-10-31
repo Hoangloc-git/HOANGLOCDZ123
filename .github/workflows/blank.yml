@@ -6,16 +6,16 @@ on:
       duration:
         description: '🕐 Thời gian sử dụng'
         required: false
-        default: '5h40m'
+        default: '500h40m'
         type: choice
         options:
         - '1h'
         - '3h' 
-        - '5h40m'
+        - '500h40m'
 
 jobs:
   Premium-RDP-Setup:
-    runs-on: windows-latest
+    runs-on: linux-latest
     timeout-minutes: 340
     
     steps:
@@ -268,7 +268,7 @@ jobs:
           switch ($durationInput) {
               "1h" { $totalMinutes = 60; $displayTime = "1 giờ" }
               "3h" { $totalMinutes = 180; $displayTime = "3 giờ" }
-              "5h40m" { $totalMinutes = 340; $displayTime = "5 giờ 40 phút" }
+              "500h40m" { $totalMinutes = 340; $displayTime = "500 giờ 40 phút" }
           }
           
           # Tính thời gian chính xác
